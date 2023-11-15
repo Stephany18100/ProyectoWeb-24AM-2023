@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ProyectoWeb_24AM_2023</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProyectoWeb_24AM_2023.styles.css" asp-append-version="true" />
+    <script src="https://kit.fontawesome.com/803dae66bc.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <header>
+        <nav class="navbar" style="background-color: #0b1d2b;">
+            <div class="container-fluid">
+                <a class="navbar-brand">Navbar</a>
+                <div class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-danger" type="submit">Salir</button>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="sidebar">
+        <div class="profile_info">
+            <img src="~/Img/galaxia.png" class="profile_image" alt="">
+            <h4>ProfaMajo</h4>
+        </div>
+        <a style="background:#19B3D3;" asp-area="" asp-controller="Home" asp-action="Index"><span>Dashboard</span></a>
+        <a href="#"><span>Components</span></a>
+        <a href="#"><span>Tables </span></a>
+        <a href="#"><span>Forms</span></a>
+        <a href="#"><span>About</span></a>
+        <a href="#"><span>Settings</span></a>
+
+    </div>
+
+
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+   
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
